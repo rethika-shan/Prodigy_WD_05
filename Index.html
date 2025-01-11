@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous'>
+    <script src="https://kit.fontawesome.com/4d9f707396.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="container-fluid p-4 m-0" id="mainContainer">
+        <span class="text-light d-block" id="cityName1"></span>
+
+        <div class="d-flex text-light">
+            <div class="">
+                <h1 id="date"><b>4</b></h1>
+            </div>
+            <div class="ms-3 mt-3">
+                <h6 class="mb-0" id="tmonth">December</h6>
+                <h4 class="mb-0 fw-bold text-uppercase" id="day">Wednesday</h4>
+                <div class="">
+                    <h2 class="m1-2 mb-5 fw-normal" id="time"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-light mt-5 me-auto" id="temp-container">
+            <h1><span id="temp"></span><sup>°<span class="subscript">c</span></sup></h1>
+            <h3 class="text-capitalize" id="city-main">
+                <span id="cityName"></span> / <span id="main"></span>
+            </h3>
+            <div class="d-flex flex-row mb-2">
+                <p>Feels Like : <span id="feels_like"></span><sup>°</sup>C</p>
+                <p class="ms-3">Min Temp : <span id="temp_min"></span><sup>°</sup>C</p>
+                <p class="ms-3">Max Temp : <span id="temp_max"></span><sup>°</sup>C</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-light mt-2 me-auto">
+            <div class="row">
+                <div class="col">
+                    <p class="mb-0">Humidity : <span id="humidity"></span> %</p>
+                    <p class="mb-0">Pressure : <span id="pressure"></span> hPa</p>
+                </div>
+                <div class="col">
+                    <p class="mb-0">Visibility : <span id="visibility"></span> m</p>
+                    <p class="mb-0">Wind Speed : <span id="speed"></span> m/s</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="forecast">
+            <!-- Days -->
+            <div class="col h-100 d-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-cloud fa-lg"></i>
+                    <small>Cloudy</small>
+                    <br>
+                    <small>Monday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-smog"></i>
+                    <small>Fog</small>
+                    <br>
+                    <small>Tuesday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-none d-md-flex  justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <small>Thunder</small>
+                    <br>
+                    <small>Wednesday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-none d-md-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-cloud-showers-heavy"></i>
+                    <small>Rainy</small>
+                    <br>
+                    <small>Thrusday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-none d-md-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <small>Sunny</small>
+                    <br>
+                    <small>Friday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-none d-md-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <small>Thunder</small>
+                    <br>
+                    <small>Saturday</small>
+                </div>
+            </div>
+            <div class="col h-100 d-flex justify-content-center align-items-center">
+                <div class="text-light text-center">
+                    <i class="fa-solid fa-smog"></i>
+                    <small>Fog</small>
+                    <br>
+                    <small>Sunday</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-0 m-0 rounded-0 search">
+            <div class="card-body">
+                <form action="" class="d-flex" id="weatherForm">
+                    <input type="text" class="ps-3 pe-5" id="formCity" placeholder="Enter City here...">
+                    <button class="btn btn-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js'></script>
+
+</html>
